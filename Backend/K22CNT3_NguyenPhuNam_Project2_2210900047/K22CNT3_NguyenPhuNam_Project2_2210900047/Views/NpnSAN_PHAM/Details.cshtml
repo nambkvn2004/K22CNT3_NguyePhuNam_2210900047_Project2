@@ -1,0 +1,91 @@
+﻿@model K22CNT3_NguyenPhuNam_Project2_2210900047.Models.SAN_PHAM
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Npn2210900047Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SAN_PHAM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ten_sp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ten_sp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mo_ta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mo_ta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Thong_tin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thong_tin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gia_goc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gia_goc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gia_giam_gia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gia_giam_gia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Luot_xem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Luot_xem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ngay_cap_nhat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ngay_cap_nhat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Trang_thai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Trang_thai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LOAI_SAN_PHAM.Ten_loai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOAI_SAN_PHAM.Ten_loai)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaSP }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

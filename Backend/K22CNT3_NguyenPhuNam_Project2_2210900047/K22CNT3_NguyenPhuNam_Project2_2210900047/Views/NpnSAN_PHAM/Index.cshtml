@@ -1,0 +1,67 @@
+﻿@model IEnumerable<K22CNT3_NguyenPhuNam_Project2_2210900047.Models.SAN_PHAM>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Npn2210900047Layout.cshtml";
+}
+
+<div class="top-center-content">
+    <h2>Index</h2>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.MaSP)</th>
+            <th>@Html.DisplayNameFor(model => model.Ten_sp)</th>
+            <th>@Html.DisplayNameFor(model => model.Mo_ta)</th>
+            <th>@Html.DisplayNameFor(model => model.Thong_tin)</th>
+            <th>@Html.DisplayNameFor(model => model.Gia_goc)</th>
+            <th>@Html.DisplayNameFor(model => model.Gia_giam_gia)</th>
+            <th>@Html.DisplayNameFor(model => model.Luot_xem)</th>
+            <th>@Html.DisplayNameFor(model => model.Ngay_cap_nhat)</th>
+            <th>@Html.DisplayNameFor(model => model.Trang_thai)</th>
+            <th>@Html.DisplayNameFor(model => model.LOAI_SAN_PHAM.MaLSP)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.MaSP)</td>
+                <td>@Html.DisplayFor(modelItem => item.Ten_sp)</td>
+                <td>@Html.DisplayFor(modelItem => item.Mo_ta)</td>
+                <td>@Html.DisplayFor(modelItem => item.Thong_tin)</td>
+                <td>@Html.DisplayFor(modelItem => item.Gia_goc)</td>
+                <td>@Html.DisplayFor(modelItem => item.Gia_giam_gia)</td>
+                <td>@Html.DisplayFor(modelItem => item.Luot_xem)</td>
+                <td>@Html.DisplayFor(modelItem => item.Ngay_cap_nhat)</td>
+                <td>@Html.DisplayFor(modelItem => item.Trang_thai)</td>
+                <td>@Html.DisplayFor(modelItem => item.LOAI_SAN_PHAM.MaLSP)</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MaSP }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.MaSP }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MaSP })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    .top-center-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text */
+        margin: 20px 0; /* Optional: add margin above and below */
+    }
+
+    table {
+        margin: 0 auto; /* Center the table */
+    }
+</style>

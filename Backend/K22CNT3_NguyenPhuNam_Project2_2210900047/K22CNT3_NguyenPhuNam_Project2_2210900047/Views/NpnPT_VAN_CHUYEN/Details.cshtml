@@ -1,0 +1,51 @@
+﻿@model K22CNT3_NguyenPhuNam_Project2_2210900047.Models.PT_VAN_CHUYEN
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Npn2210900047Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PT_VAN_CHUYEN</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ten_PTVC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ten_PTVC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Do_dai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Do_dai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Don_gia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Don_gia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Trang_thai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Trang_thai)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaPTVC }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

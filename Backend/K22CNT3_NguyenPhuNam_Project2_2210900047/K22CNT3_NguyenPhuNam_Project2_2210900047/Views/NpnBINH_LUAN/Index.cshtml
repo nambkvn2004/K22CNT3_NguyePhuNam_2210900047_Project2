@@ -1,0 +1,89 @@
+﻿@model IEnumerable<K22CNT3_NguyenPhuNam_Project2_2210900047.Models.BINH_LUAN>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Npn2210900047Layout.cshtml";
+}
+
+<div class="top-center-content">
+    <h2>Index</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MaBL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KHACH_HANG.MaKH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SAN_PHAM.MaSP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tieu_de)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Noi_dung)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ngay_BL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Trang_thai)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaBL)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KHACH_HANG.MaKH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SAN_PHAM.MaSP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tieu_de)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Noi_dung)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ngay_BL)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Trang_thai)
+                </td>           
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MaBL }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.MaBL }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MaBL })
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+<style>
+    /* Center content horizontally at the top of the page */
+    .top-center-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text */
+        margin-top: 20px; /* Optional: add margin from top */
+    }
+
+    /* Ensuring the table fits nicely */
+    .table {
+        width: 80%; /* Adjust as necessary */
+        margin-top: 20px; /* Adds spacing between the header and the table */
+    }
+</style>

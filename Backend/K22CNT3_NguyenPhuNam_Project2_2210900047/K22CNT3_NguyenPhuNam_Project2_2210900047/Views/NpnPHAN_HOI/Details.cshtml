@@ -1,0 +1,83 @@
+﻿@model K22CNT3_NguyenPhuNam_Project2_2210900047.Models.PHAN_HOI
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Npn2210900047Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PHAN_HOI</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tieu_de)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tieu_de)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Noi_dung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Noi_dung)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ngay_gui)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ngay_gui)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Facebook)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Facebook)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tra_loi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tra_loi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Trang_thai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Trang_thai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Da_xem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Da_xem)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaPH }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

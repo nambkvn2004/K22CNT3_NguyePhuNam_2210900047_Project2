@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="K22CNT3_NguyenPhuNam_2210900047_Project2_DbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BINH_LUAN">
+    <Key>
+      <PropertyRef Name="MaBL" />
+    </Key>
+    <Property Name="MaBL" Type="int" Nullable="false" />
+    <Property Name="MaKH" Type="int" />
+    <Property Name="MaSP" Type="int" />
+    <Property Name="Tieu_de" Type="varchar" MaxLength="100" />
+    <Property Name="Noi_dung" Type="text" />
+    <Property Name="Ngay_BL" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="Trang_thai" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="CT_HOA_DON">
+    <Key>
+      <PropertyRef Name="MaHD" />
+      <PropertyRef Name="MaSPCT" />
+    </Key>
+    <Property Name="MaHD" Type="int" Nullable="false" />
+    <Property Name="MaSPCT" Type="int" Nullable="false" />
+    <Property Name="So_luong_ban" Type="int" Nullable="false" />
+    <Property Name="Gia_ban" Type="float" Nullable="false" />
+    <Property Name="Tra_lai" Type="int" />
+  </EntityType>
+  <EntityType Name="HINH_ANH">
+    <Key>
+      <PropertyRef Name="MaHA" />
+    </Key>
+    <Property Name="MaHA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ten_file_anh" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Trang_thai" Type="tinyint" />
+    <Property Name="MaSP" Type="int" />
+  </EntityType>
+  <EntityType Name="HOA_DON">
+    <Key>
+      <PropertyRef Name="MaHD" />
+    </Key>
+    <Property Name="MaHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ngay_HD" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="Hoten_nguoinhan" Type="varchar" MaxLength="100" />
+    <Property Name="Diachi_nguoinhan" Type="varchar" MaxLength="200" />
+    <Property Name="Dienthoai_nguoinhan" Type="varchar" MaxLength="30" />
+    <Property Name="Diachi_email" Type="varchar" MaxLength="50" />
+    <Property Name="Ngay_giao_hang" Type="datetime" />
+    <Property Name="Trang_thai" Type="tinyint" />
+    <Property Name="MaKH" Type="int" />
+    <Property Name="MaPTVC" Type="int" />
+    <Property Name="MaPTTT" Type="int" />
+  </EntityType>
+  <EntityType Name="KHACH_HANG">
+    <Key>
+      <PropertyRef Name="MaKH" />
+    </Key>
+    <Property Name="MaKH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ho_ten" Type="nvarchar" MaxLength="100" />
+    <Property Name="Tai_khoan" Type="varchar" MaxLength="50" />
+    <Property Name="Mat_khau" Type="varchar" MaxLength="32" />
+    <Property Name="Dia_chi" Type="nvarchar" MaxLength="200" />
+    <Property Name="Dien_thoai" Type="varchar" MaxLength="30" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Ngay_sinh" Type="datetime" />
+    <Property Name="Ngay_cap_nhat" Type="datetime" />
+    <Property Name="Gioi_tinh" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="LIEN_HE">
+    <Key>
+      <PropertyRef Name="MaLH" />
+    </Key>
+    <Property Name="MaLH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tieu_de" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Dia_chi" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Dien_thoai" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Facebook" Type="varchar" MaxLength="100" />
+    <Property Name="Logo" Type="varchar" MaxLength="50" />
+    <Property Name="Trang_thai" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="LOAI_SAN_PHAM">
+    <Key>
+      <PropertyRef Name="MaLSP" />
+    </Key>
+    <Property Name="MaLSP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ten_loai" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Trang_thai" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="PHAN_HOI">
+    <Key>
+      <PropertyRef Name="MaPH" />
+    </Key>
+    <Property Name="MaPH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tieu_de" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Noi_dung" Type="text" Nullable="false" />
+    <Property Name="Ngay_gui" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Facebook" Type="varchar" MaxLength="100" />
+    <Property Name="Tra_loi" Type="text" />
+    <Property Name="Trang_thai" Type="tinyint" />
+    <Property Name="Da_xem" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="PT_THANH_TOAN">
+    <Key>
+      <PropertyRef Name="MaPTTT" />
+    </Key>
+    <Property Name="MaPTTT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ten_PTTT" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Trang_thai" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="PT_VAN_CHUYEN">
+    <Key>
+      <PropertyRef Name="MaPTVC" />
+    </Key>
+    <Property Name="MaPTVC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ten_PTVC" Type="varchar" MaxLength="50" />
+    <Property Name="Do_dai" Type="int" />
+    <Property Name="Don_gia" Type="float" Nullable="false" />
+    <Property Name="Trang_thai" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="QUAN_TRI">
+    <Key>
+      <PropertyRef Name="Tai_khoan" />
+    </Key>
+    <Property Name="Tai_khoan" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mat_khau" Type="varchar" MaxLength="32" />
+    <Property Name="Trang_thai" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="SAN_PHAM">
+    <Key>
+      <PropertyRef Name="MaSP" />
+    </Key>
+    <Property Name="MaSP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ten_sp" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Mo_ta" Type="varchar" MaxLength="250" />
+    <Property Name="Thong_tin" Type="text" />
+    <Property Name="Gia_goc" Type="float" Nullable="false" />
+    <Property Name="Gia_giam_gia" Type="float" />
+    <Property Name="Luot_xem" Type="int" Nullable="false" />
+    <Property Name="Ngay_cap_nhat" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="Trang_thai" Type="tinyint" />
+    <Property Name="MaLSP" Type="int" />
+  </EntityType>
+  <EntityType Name="SAN_PHAM_CT">
+    <Key>
+      <PropertyRef Name="MaSPCT" />
+    </Key>
+    <Property Name="MaSPCT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="So_luong" Type="int" Nullable="false" />
+    <Property Name="MaSP" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="fk_HOA_DON_CT_HOA_DON">
+    <End Role="HOA_DON" Type="Self.HOA_DON" Multiplicity="1" />
+    <End Role="CT_HOA_DON" Type="Self.CT_HOA_DON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOA_DON">
+        <PropertyRef Name="MaHD" />
+      </Principal>
+      <Dependent Role="CT_HOA_DON">
+        <PropertyRef Name="MaHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_KHACH_HANG_BINH_LUAN">
+    <End Role="KHACH_HANG" Type="Self.KHACH_HANG" Multiplicity="0..1" />
+    <End Role="BINH_LUAN" Type="Self.BINH_LUAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACH_HANG">
+        <PropertyRef Name="MaKH" />
+      </Principal>
+      <Dependent Role="BINH_LUAN">
+        <PropertyRef Name="MaKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_KHACH_HANG_HOA_DON">
+    <End Role="KHACH_HANG" Type="Self.KHACH_HANG" Multiplicity="0..1" />
+    <End Role="HOA_DON" Type="Self.HOA_DON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACH_HANG">
+        <PropertyRef Name="MaKH" />
+      </Principal>
+      <Dependent Role="HOA_DON">
+        <PropertyRef Name="MaKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_LOAI_SAN_PHAM">
+    <End Role="LOAI_SAN_PHAM" Type="Self.LOAI_SAN_PHAM" Multiplicity="0..1" />
+    <End Role="SAN_PHAM" Type="Self.SAN_PHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAI_SAN_PHAM">
+        <PropertyRef Name="MaLSP" />
+      </Principal>
+      <Dependent Role="SAN_PHAM">
+        <PropertyRef Name="MaLSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_PT_THANH_TOAN_HOA_DON">
+    <End Role="PT_THANH_TOAN" Type="Self.PT_THANH_TOAN" Multiplicity="0..1" />
+    <End Role="HOA_DON" Type="Self.HOA_DON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PT_THANH_TOAN">
+        <PropertyRef Name="MaPTTT" />
+      </Principal>
+      <Dependent Role="HOA_DON">
+        <PropertyRef Name="MaPTTT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_PT_VAN_CHUYEN_HOA_DON">
+    <End Role="PT_VAN_CHUYEN" Type="Self.PT_VAN_CHUYEN" Multiplicity="0..1" />
+    <End Role="HOA_DON" Type="Self.HOA_DON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PT_VAN_CHUYEN">
+        <PropertyRef Name="MaPTVC" />
+      </Principal>
+      <Dependent Role="HOA_DON">
+        <PropertyRef Name="MaPTVC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_SAN_PHAM_BINH_LUAN">
+    <End Role="SAN_PHAM" Type="Self.SAN_PHAM" Multiplicity="0..1" />
+    <End Role="BINH_LUAN" Type="Self.BINH_LUAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SAN_PHAM">
+        <PropertyRef Name="MaSP" />
+      </Principal>
+      <Dependent Role="BINH_LUAN">
+        <PropertyRef Name="MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_SAN_PHAM_CT_CT_HOA_DON">
+    <End Role="SAN_PHAM_CT" Type="Self.SAN_PHAM_CT" Multiplicity="1" />
+    <End Role="CT_HOA_DON" Type="Self.CT_HOA_DON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SAN_PHAM_CT">
+        <PropertyRef Name="MaSPCT" />
+      </Principal>
+      <Dependent Role="CT_HOA_DON">
+        <PropertyRef Name="MaSPCT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_SAN_PHAM_HINH_ANH">
+    <End Role="SAN_PHAM" Type="Self.SAN_PHAM" Multiplicity="0..1" />
+    <End Role="HINH_ANH" Type="Self.HINH_ANH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SAN_PHAM">
+        <PropertyRef Name="MaSP" />
+      </Principal>
+      <Dependent Role="HINH_ANH">
+        <PropertyRef Name="MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_SAN_PHAM_SAN_PHAM_CT">
+    <End Role="SAN_PHAM" Type="Self.SAN_PHAM" Multiplicity="0..1" />
+    <End Role="SAN_PHAM_CT" Type="Self.SAN_PHAM_CT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SAN_PHAM">
+        <PropertyRef Name="MaSP" />
+      </Principal>
+      <Dependent Role="SAN_PHAM_CT">
+        <PropertyRef Name="MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="K22CNT3_NguyenPhuNam_2210900047_Project2_DbModelStoreContainer">
+    <EntitySet Name="BINH_LUAN" EntityType="Self.BINH_LUAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CT_HOA_DON" EntityType="Self.CT_HOA_DON" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HINH_ANH" EntityType="Self.HINH_ANH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HOA_DON" EntityType="Self.HOA_DON" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KHACH_HANG" EntityType="Self.KHACH_HANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LIEN_HE" EntityType="Self.LIEN_HE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOAI_SAN_PHAM" EntityType="Self.LOAI_SAN_PHAM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHAN_HOI" EntityType="Self.PHAN_HOI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PT_THANH_TOAN" EntityType="Self.PT_THANH_TOAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PT_VAN_CHUYEN" EntityType="Self.PT_VAN_CHUYEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QUAN_TRI" EntityType="Self.QUAN_TRI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SAN_PHAM" EntityType="Self.SAN_PHAM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SAN_PHAM_CT" EntityType="Self.SAN_PHAM_CT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_HOA_DON_CT_HOA_DON" Association="Self.fk_HOA_DON_CT_HOA_DON">
+      <End Role="HOA_DON" EntitySet="HOA_DON" />
+      <End Role="CT_HOA_DON" EntitySet="CT_HOA_DON" />
+    </AssociationSet>
+    <AssociationSet Name="fk_KHACH_HANG_BINH_LUAN" Association="Self.fk_KHACH_HANG_BINH_LUAN">
+      <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
+      <End Role="BINH_LUAN" EntitySet="BINH_LUAN" />
+    </AssociationSet>
+    <AssociationSet Name="fk_KHACH_HANG_HOA_DON" Association="Self.fk_KHACH_HANG_HOA_DON">
+      <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
+      <End Role="HOA_DON" EntitySet="HOA_DON" />
+    </AssociationSet>
+    <AssociationSet Name="fk_LOAI_SAN_PHAM" Association="Self.fk_LOAI_SAN_PHAM">
+      <End Role="LOAI_SAN_PHAM" EntitySet="LOAI_SAN_PHAM" />
+      <End Role="SAN_PHAM" EntitySet="SAN_PHAM" />
+    </AssociationSet>
+    <AssociationSet Name="fk_PT_THANH_TOAN_HOA_DON" Association="Self.fk_PT_THANH_TOAN_HOA_DON">
+      <End Role="PT_THANH_TOAN" EntitySet="PT_THANH_TOAN" />
+      <End Role="HOA_DON" EntitySet="HOA_DON" />
+    </AssociationSet>
+    <AssociationSet Name="fk_PT_VAN_CHUYEN_HOA_DON" Association="Self.fk_PT_VAN_CHUYEN_HOA_DON">
+      <End Role="PT_VAN_CHUYEN" EntitySet="PT_VAN_CHUYEN" />
+      <End Role="HOA_DON" EntitySet="HOA_DON" />
+    </AssociationSet>
+    <AssociationSet Name="fk_SAN_PHAM_BINH_LUAN" Association="Self.fk_SAN_PHAM_BINH_LUAN">
+      <End Role="SAN_PHAM" EntitySet="SAN_PHAM" />
+      <End Role="BINH_LUAN" EntitySet="BINH_LUAN" />
+    </AssociationSet>
+    <AssociationSet Name="fk_SAN_PHAM_CT_CT_HOA_DON" Association="Self.fk_SAN_PHAM_CT_CT_HOA_DON">
+      <End Role="SAN_PHAM_CT" EntitySet="SAN_PHAM_CT" />
+      <End Role="CT_HOA_DON" EntitySet="CT_HOA_DON" />
+    </AssociationSet>
+    <AssociationSet Name="fk_SAN_PHAM_HINH_ANH" Association="Self.fk_SAN_PHAM_HINH_ANH">
+      <End Role="SAN_PHAM" EntitySet="SAN_PHAM" />
+      <End Role="HINH_ANH" EntitySet="HINH_ANH" />
+    </AssociationSet>
+    <AssociationSet Name="fk_SAN_PHAM_SAN_PHAM_CT" Association="Self.fk_SAN_PHAM_SAN_PHAM_CT">
+      <End Role="SAN_PHAM" EntitySet="SAN_PHAM" />
+      <End Role="SAN_PHAM_CT" EntitySet="SAN_PHAM_CT" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

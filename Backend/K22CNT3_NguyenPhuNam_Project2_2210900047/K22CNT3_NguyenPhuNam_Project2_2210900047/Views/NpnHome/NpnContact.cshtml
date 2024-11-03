@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Nguyễn Phú Nam";
+}
+<main aria-labelledby="title" class="top-center-content">
+    <h2 id="title">@ViewBag.Title</h2>
+    <h3>@ViewBag.msv</h3>
+    <h3>@ViewBag.fullname</h3>
+
+    <address>
+        <p>K22CNT3</p>
+        <p>- Project2</p>
+        <p><abbr title="Phone">P:</abbr> 0902069171</p>
+    </address>
+
+    <address>
+        <p><strong>Support:</strong> <a href="mailto:nambkvn2004@gmail.com">nambkvn2004@gmail.com</a></p>
+        <p><strong>Marketing:</strong> <a href="mailto:chungtrinhj@gmail.com">chungtrinhj@gmail.com</a></p>
+    </address>
+</main>
+
+<style>
+    /* Center horizontally and position towards the top */
+    .top-center-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 50px; /* Controls vertical positioning */
+    }
+
+    address {
+        margin: 10px 0;
+        font-style: normal;
+    }
+
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        a:hover {
+            text-decoration: underline;
+        }
+</style>

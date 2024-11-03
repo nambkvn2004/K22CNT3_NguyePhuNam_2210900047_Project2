@@ -1,0 +1,59 @@
+﻿@model K22CNT3_NguyenPhuNam_Project2_2210900047.Models.CT_HOA_DON
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Npn2210900047Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CT_HOA_DON</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.So_luong_ban)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.So_luong_ban)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gia_ban)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gia_ban)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tra_lai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tra_lai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HOA_DON.Hoten_nguoinhan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOA_DON.Hoten_nguoinhan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SAN_PHAM_CT.MaSPCT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SAN_PHAM_CT.MaSPCT)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

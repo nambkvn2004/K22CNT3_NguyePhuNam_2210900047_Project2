@@ -1,0 +1,57 @@
+﻿@model K22CNT3_NguyenPhuNam_Project2_2210900047.Models.PT_VAN_CHUYEN
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Npn2210900047Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PT_VAN_CHUYEN</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ten_PTVC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ten_PTVC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Do_dai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Do_dai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Don_gia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Don_gia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Trang_thai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Trang_thai)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

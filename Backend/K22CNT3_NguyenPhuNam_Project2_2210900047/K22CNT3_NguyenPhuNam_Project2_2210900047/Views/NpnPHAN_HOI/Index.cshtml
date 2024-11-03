@@ -1,0 +1,66 @@
+﻿@model IEnumerable<K22CNT3_NguyenPhuNam_Project2_2210900047.Models.PHAN_HOI>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Npn2210900047Layout.cshtml";
+}
+
+<div class="top-center-content">
+    <h2>Index</h2>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.MaPH)</th>
+            <th>@Html.DisplayNameFor(model => model.Tieu_de)</th>
+            <th>@Html.DisplayNameFor(model => model.Noi_dung)</th>
+            <th>@Html.DisplayNameFor(model => model.Ngay_gui)</th>
+            <th>@Html.DisplayNameFor(model => model.Email)</th>
+            <th>@Html.DisplayNameFor(model => model.Facebook)</th>
+            <th>@Html.DisplayNameFor(model => model.Tra_loi)</th>
+            <th>@Html.DisplayNameFor(model => model.Trang_thai)</th>
+            <th>@Html.DisplayNameFor(model => model.Da_xem)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.MaPH)</td>
+                <td>@Html.DisplayFor(modelItem => item.Tieu_de)</td>
+                <td>@Html.DisplayFor(modelItem => item.Noi_dung)</td>
+                <td>@Html.DisplayFor(modelItem => item.Ngay_gui)</td>
+                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                <td>@Html.DisplayFor(modelItem => item.Facebook)</td>
+                <td>@Html.DisplayFor(modelItem => item.Tra_loi)</td>
+                <td>@Html.DisplayFor(modelItem => item.Trang_thai)</td>
+                <td>@Html.DisplayFor(modelItem => item.Da_xem)</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MaPH }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.MaPH }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MaPH })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    .top-center-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text */
+        margin: 20px 0; /* Optional: add margin above and below */
+    }
+
+    table {
+        margin: 0 auto; /* Center the table */
+    }
+</style>
+    

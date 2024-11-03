@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Nguyễn Phú Nam</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <style>
+        /* Basic Reset */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Crossbar CSS */
+        .crossbar {
+            display: flex; /* Enable flexbox layout */
+        }
+
+        /* Sidebar CSS */
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            background-color: #343a40;
+            padding-top: 20px;
+            overflow-x: hidden;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+            .sidebar h2 {
+                color: #ffffff;
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 1.5em;
+            }
+
+            .sidebar a {
+                padding: 10px 15px;
+                text-decoration: none;
+                font-size: 18px;
+                color: #ffffff;
+                display: flex;
+                align-items: center;
+                transition: background-color 0.3s ease;
+            }
+
+                .sidebar a:hover {
+                    background-color: #575d63;
+                    color: #ffffff;
+                }
+
+                .sidebar a i {
+                    margin-right: 10px;
+                }
+
+        .content {
+            flex-grow: 1; /* Allow the content area to grow */
+            padding: 20px;
+            margin-left: 250px; /* Width of the sidebar */
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #6c757d;
+        }
+
+            footer a {
+                color: #007bff;
+                text-decoration: none;
+            }
+
+                footer a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body>
+    <div class="crossbar">
+        <div class="sidebar">
+            <h2>Nguyễn Phú Nam</h2>
+            <nav>
+                <a href="@Url.Action("NpnIndex", "NpnHome")"><i class="fas fa-home"></i> Home</a>
+                <a href="@Url.Action("NpnAbout", "NpnHome")"><i class="fas fa-info-circle"></i> About</a>
+                <a href="@Url.Action("NpnContact", "NpnHome")"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="@Url.Action("Index", "NpnBINH_LUAN")"><i class="fas fa-comments"></i> Bình luận</a>
+                <a href="@Url.Action("Index", "NpnCT_HOA_DON")"><i class="fas fa-receipt"></i> Chi tiết hóa đơn</a>
+                <a href="@Url.Action("Index", "NpnHINH_ANH")"><i class="fas fa-image"></i> Hình ảnh</a>
+                <a href="@Url.Action("Index", "NpnHOA_DON")"><i class="fas fa-file-invoice"></i> Hóa đơn</a>
+                <a href="@Url.Action("Index", "NpnKHACH_HANG")"><i class="fas fa-users"></i> Khách hàng</a>
+                <a href="@Url.Action("Index", "NpnLIEN_HE")"><i class="fas fa-phone"></i> Liên hệ</a>
+                <a href="@Url.Action("Index", "NpnLOAI_SAN_PHAM")"><i class="fas fa-tags"></i> Loại sản phẩm</a>
+                <a href="@Url.Action("Index", "NpnPHAN_HOI")"><i class="fas fa-reply"></i> Phản hồi</a>
+                <a href="@Url.Action("Index", "NpnPT_THANH_TOAN")"><i class="fas fa-credit-card"></i> Phương thức thanh toán</a>
+                <a href="@Url.Action("Index", "NpnPT_VAN_CHUYEN")"><i class="fas fa-truck"></i> Phương thức vận chuyển</a>
+                <a href="@Url.Action("Index", "NpnQUAN_TRI")"><i class="fas fa-user-shield"></i> Quản trị</a>
+                <a href="@Url.Action("Index", "NpnSAN_PHAM")"><i class="fas fa-box"></i> Sản phẩm</a>
+                <a href="@Url.Action("Index", "NpnSAN_PHAM_CT")"><i class="fas fa-box-open"></i> Sản phẩm chi tiết</a>
+            </nav>
+        </div>
+
+        <div class="content">
+            <h1>Welcome to Nguyễn Phú Nam</h1>
+            <p>This is the main content area.</p>
+
+            <div class="container body-content">
+                @RenderBody()
+                <hr />
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - Nguyễn Phú Nam</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

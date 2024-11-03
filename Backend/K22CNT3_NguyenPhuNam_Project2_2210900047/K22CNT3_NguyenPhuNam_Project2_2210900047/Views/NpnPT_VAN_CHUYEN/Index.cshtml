@@ -1,0 +1,57 @@
+﻿@model IEnumerable<K22CNT3_NguyenPhuNam_Project2_2210900047.Models.PT_VAN_CHUYEN>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Npn2210900047Layout.cshtml";
+}
+
+<div class="top-center-content">
+    <h2>Index</h2>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.MaPTVC)</th>
+            <th>@Html.DisplayNameFor(model => model.Ten_PTVC)</th>
+            <th>@Html.DisplayNameFor(model => model.Do_dai)</th>
+            <th>@Html.DisplayNameFor(model => model.Don_gia)</th>
+            <th>@Html.DisplayNameFor(model => model.Trang_thai)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.MaPTVC)</td>
+                <td>@Html.DisplayFor(modelItem => item.Ten_PTVC)</td>
+                <td>@Html.DisplayFor(modelItem => item.Do_dai)</td>
+                <td>@Html.DisplayFor(modelItem => item.Don_gia)</td>
+                <td>@Html.DisplayFor(modelItem => item.Trang_thai)</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MaPTVC }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.MaPTVC }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MaPTVC })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    .top-center-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text */
+        margin: 20px 0; /* Optional: add margin above and below */
+    }
+
+    table {
+        margin: 0 auto; /* Center the table */
+    }
+</style>

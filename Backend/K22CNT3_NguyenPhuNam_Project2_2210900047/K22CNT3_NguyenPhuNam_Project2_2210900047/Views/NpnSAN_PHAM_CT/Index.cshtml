@@ -1,0 +1,47 @@
+﻿@model IEnumerable<K22CNT3_NguyenPhuNam_Project2_2210900047.Models.SAN_PHAM_CT>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Npn2210900047Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaSPCT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.So_luong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SAN_PHAM.MaSP)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaSPCT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.So_luong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SAN_PHAM.MaSP)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MaSPCT }) |
+                @Html.ActionLink("Details", "Details", new { id = item.MaSPCT }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MaSPCT })
+            </td>
+        </tr>
+    }
+
+</table>

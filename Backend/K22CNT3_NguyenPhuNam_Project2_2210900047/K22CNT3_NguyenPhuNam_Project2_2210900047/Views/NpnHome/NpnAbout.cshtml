@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<main aria-labelledby="title" class="top-center-content">
+    <h2 id="title">@ViewBag.Title</h2>
+    <h3>@ViewBag.Message</h3>
+    <p>Use this area to provide additional information.</p>
+</main>
+
+<style>
+    /* Center the content horizontally and position it towards the top */
+    .top-center-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        min-height: 100vh;
+        padding-top: 50px; /* Adjust this value to control how close to the top it appears */
+    }
+</style>
