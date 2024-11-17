@@ -1,89 +1,118 @@
 ﻿@model IEnumerable<K22CNT3_NguyenPhuNam_Project2_2210900047.Models.BINH_LUAN>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Danh sách";
     Layout = "~/Views/Shared/_Npn2210900047Layout.cshtml";
 }
 
 <div class="top-center-content">
-    <h2>Index</h2>
+    <h2>Danh sách bình luận</h2>
 
     <p>
-        @Html.ActionLink("Create New", "Create")
+        @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
     </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.MaBL)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.KHACH_HANG.MaKH)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SAN_PHAM.MaSP)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Tieu_de)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Noi_dung)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Ngay_BL)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Trang_thai)
-            </th>
-            <th></th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
+    <table class="styled-table">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MaBL)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.KHACH_HANG.MaKH)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.SAN_PHAM.MaSP)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Tieu_de)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Noi_dung)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Ngay_BL)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Trang_thai)
-                </td>           
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.MaBL }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.MaBL }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.MaBL })
-                </td>
+                <th>@Html.DisplayNameFor(model => model.MaBL)</th>
+                <th>@Html.DisplayNameFor(model => model.KHACH_HANG.MaKH)</th>
+                <th>@Html.DisplayNameFor(model => model.SAN_PHAM.MaSP)</th>
+                <th>@Html.DisplayNameFor(model => model.Tieu_de)</th>
+                <th>@Html.DisplayNameFor(model => model.Noi_dung)</th>
+                <th>@Html.DisplayNameFor(model => model.Ngay_BL)</th>
+                <th>@Html.DisplayNameFor(model => model.Trang_thai)</th>
+                <th>Actions</th>
             </tr>
-        }
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.MaBL)</td>
+                    <td>@Html.DisplayFor(modelItem => item.KHACH_HANG.MaKH)</td>
+                    <td>@Html.DisplayFor(modelItem => item.SAN_PHAM.MaSP)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Tieu_de)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Noi_dung)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Ngay_BL)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Trang_thai)</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.MaBL }, new { @class = "btn btn-warning btn-sm" }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.MaBL }, new { @class = "btn btn-info btn-sm" }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.MaBL }, new { @class = "btn btn-danger btn-sm" })
+                    </td>
+                </tr>
+            }
+        </tbody>
     </table>
 </div>
 
 <style>
-    /* Center content horizontally at the top of the page */
     .top-center-content {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center items horizontally */
-        text-align: center; /* Center text */
-        margin-top: 20px; /* Optional: add margin from top */
+        align-items: center;
+        text-align: center;
+        margin: 20px 0;
     }
 
-    /* Ensuring the table fits nicely */
-    .table {
-        width: 80%; /* Adjust as necessary */
-        margin-top: 20px; /* Adds spacing between the header and the table */
+    .styled-table {
+        width: 90%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        font-size: 0.9em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+        .styled-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .styled-table th, .styled-table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+        }
+
+        .styled-table tbody tr {
+            transition: background-color 0.2s ease-in;
+        }
+
+            .styled-table tbody tr:hover {
+                background-color: #f1f1f1;
+            }
+
+    .btn {
+        padding: 6px 12px;
+        margin: 2px;
+        text-decoration: none;
+        border-radius: 4px;
+        color: white;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+    }
+
+    .btn-warning {
+        background-color: #ffc107;
+        border: none;
+    }
+
+    .btn-info {
+        background-color: #17a2b8;
+        border: none;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        border: none;
+    }
+
+    .btn:hover {
+        opacity: 0.9;
     }
 </style>

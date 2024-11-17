@@ -108,7 +108,7 @@ Facebook varchar(100),
 Tra_loi nvarchar(200),
 Trang_thai tinyint,
 Da_xem tinyint)
-
+select *  from BINH_LUAN
 -- Bang QUAN_TRI
 insert into QUAN_TRI values ('admin', '2210900047', 1)
 
@@ -126,9 +126,9 @@ values (N'Banh ngot', 1)
 
 -- Bang SAN_PHAM
 insert into SAN_PHAM (Ten_sp, Mo_ta, Thong_tin, Gia_goc, Gia_giam_gia, Luot_xem, Ngay_cap_nhat, Trang_thai, MaLSP)
-values (N'Tao', N'Tao do tuoi', N'Tao do huu co tu trang trai', 2.00, 1.80, 150, GETDATE(), 1, 1)
+values (N'Tao', N'Tao do tuoi', N'Tao do huu co tu trang trai', 2.00, 1.80, 150, '2024-11-14', 1, 1)
 insert into SAN_PHAM (Ten_sp, Mo_ta, Thong_tin, Gia_goc, Gia_giam_gia, Luot_xem, Ngay_cap_nhat, Trang_thai, MaLSP)
-values (N'Banh chocolate', N'Banh chocolate ngon', N'Banh chocolate am voi lop ganache', 15.00, 12.00, 80, GETDATE(), 1, 2)
+values (N'Banh chocolate', N'Banh chocolate ngon', N'Banh chocolate am voi lop ganache', 15.00, 12.00, 80, '2024-11-14', 1, 2)
 
 -- Bang PT_VAN_CHUYEN
 insert into PT_VAN_CHUYEN (Ten_PTVC, Do_dai, Don_gia, Trang_thai)
@@ -179,3 +179,4 @@ values (N'Lien he', N'So 10, Duong 2', '0987654321', 'lienhe@gmail.com', 'fb.com
 -- Bang PHAN_HOI
 insert into PHAN_HOI (Tieu_de, Noi_dung, Ngay_gui, Email, Facebook, Tra_loi, Trang_thai, Da_xem)
 values (N'Phan hoi ve dich vu', N'Dich vu rat tot', GETDATE(), 'phd@gmail.com', 'fb.com/phd', N'Cam on phan hoi', 1, 0)
+ALTER TABLE BINH_LUAN ALTER COLUMN Ngay_BL DATETIME NULL;

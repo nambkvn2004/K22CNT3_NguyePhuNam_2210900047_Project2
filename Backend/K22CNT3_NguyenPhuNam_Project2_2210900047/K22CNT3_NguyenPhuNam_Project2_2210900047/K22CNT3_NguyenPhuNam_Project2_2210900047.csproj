@@ -200,9 +200,6 @@
     <Compile Include="Models\SAN_PHAM_CT.cs">
       <DependentUpon>Npn2210900047Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>Npn2210900047Model.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

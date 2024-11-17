@@ -29,7 +29,7 @@ namespace K22CNT3_NguyenPhuNam_Project2_2210900047.Models
         public double Gia_goc { get; set; }
         public Nullable<double> Gia_giam_gia { get; set; }
         public int Luot_xem { get; set; }
-        public byte[] Ngay_cap_nhat { get; set; }
+        public Nullable<System.DateTime> Ngay_cap_nhat { get; set; }
         public Nullable<byte> Trang_thai { get; set; }
         public Nullable<int> MaLSP { get; set; }
     

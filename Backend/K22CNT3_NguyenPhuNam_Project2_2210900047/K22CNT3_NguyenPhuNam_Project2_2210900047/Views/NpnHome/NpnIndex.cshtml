@@ -1,52 +1,50 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Trang Chủ";
 }
 
 <main class="top-center-content">
-    <!-- Main title section with a brief description and primary action button -->
+    <!-- Phần tiêu đề chính với mô tả ngắn gọn và nút hành động chính -->
     <section class="row text-center" aria-labelledby="title">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great websites and web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
+        <h1 id="title">Đặt Món Ăn Trực Tuyến</h1>
+        <p class="lead">Trải nghiệm sự tiện lợi khi đặt món ăn yêu thích từ một loạt các nhà hàng, giao đến tận cửa nhà bạn.</p>
+        <p><a href="/about" class="btn btn-primary btn-md">Tìm hiểu thêm &raquo;</a></p>
     </section>
 
-    <!-- Row with three columns for additional sections (Getting Started, Libraries, Hosting) -->
+    <!-- Dòng với ba cột cho các phần bổ sung (Cách bắt đầu, Thực đơn, Tùy chọn giao hàng) -->
     <div class="row mt-4">
-        <!-- Getting Started Section -->
+        <!-- Phần Cách bắt đầu -->
         <section class="col-md-4 text-center" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting Started</h2>
+            <h2 id="gettingStartedTitle">Cách Bắt Đầu</h2>
             <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
+                Đăng ký và tạo tài khoản để khám phá các món ăn và nhà hàng có sẵn để giao tận nơi hoặc lấy mang đi.
             </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+            <p><a class="btn btn-outline-dark" href="/signup">Đăng ký &raquo;</a></p>
         </section>
 
-        <!-- Get More Libraries Section -->
-        <section class="col-md-4 text-center" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get More Libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <!-- Phần Thực đơn -->
+        <section class="col-md-4 text-center" aria-labelledby="menuTitle">
+            <h2 id="menuTitle">Khám Phá Thực Đơn</h2>
+            <p>Khám phá thực đơn đa dạng từ các nhà hàng khác nhau, bao gồm các món ăn yêu thích và những món mới hấp dẫn.</p>
+            <p><a class="btn btn-outline-dark" href="/menu">Xem Thực Đơn &raquo;</a></p>
         </section>
 
-        <!-- Web Hosting Section -->
-        <section class="col-md-4 text-center" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <!-- Phần Tùy chọn Giao hàng -->
+        <section class="col-md-4 text-center" aria-labelledby="deliveryOptionsTitle">
+            <h2 id="deliveryOptionsTitle">Tùy Chọn Giao Hàng Linh Hoạt</h2>
+            <p>Chọn giao hàng nhanh tại nhà, mang đi hoặc đặt món theo lịch với các tùy chọn giao hàng linh hoạt.</p>
+            <p><a class="btn btn-outline-dark" href="/delivery-options">Khám Phá Giao Hàng &raquo;</a></p>
         </section>
     </div>
 </main>
 
 <style>
-    /* Center content horizontally and position it towards the top */
+    /* Căn giữa nội dung theo chiều ngang và vị trí gần đầu trang */
     .top-center-content {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        margin-top: 30px; /* Adjust this value to control vertical positioning closer to the top */
+        margin-top: 30px; /* Điều chỉnh giá trị này để kiểm soát vị trí theo chiều dọc gần đầu trang */
     }
 
     .row {

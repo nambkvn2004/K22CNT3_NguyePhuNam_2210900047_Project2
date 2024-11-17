@@ -7,9 +7,9 @@
     <Property Name="MaBL" Type="int" Nullable="false" />
     <Property Name="MaKH" Type="int" />
     <Property Name="MaSP" Type="int" />
-    <Property Name="Tieu_de" Type="varchar" MaxLength="100" />
-    <Property Name="Noi_dung" Type="text" />
-    <Property Name="Ngay_BL" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="Tieu_de" Type="nvarchar" MaxLength="100" />
+    <Property Name="Noi_dung" Type="nvarchar" MaxLength="200" />
+    <Property Name="Ngay_BL" Type="datetime" StoreGeneratedPattern="Computed" />
     <Property Name="Trang_thai" Type="tinyint" />
   </EntityType>
   <EntityType Name="CT_HOA_DON">
@@ -37,9 +37,9 @@
       <PropertyRef Name="MaHD" />
     </Key>
     <Property Name="MaHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Ngay_HD" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
-    <Property Name="Hoten_nguoinhan" Type="varchar" MaxLength="100" />
-    <Property Name="Diachi_nguoinhan" Type="varchar" MaxLength="200" />
+    <Property Name="Ngay_HD" Type="datetime" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="Hoten_nguoinhan" Type="nvarchar" MaxLength="100" />
+    <Property Name="Diachi_nguoinhan" Type="nvarchar" MaxLength="200" />
     <Property Name="Dienthoai_nguoinhan" Type="varchar" MaxLength="30" />
     <Property Name="Diachi_email" Type="varchar" MaxLength="50" />
     <Property Name="Ngay_giao_hang" Type="datetime" />
@@ -68,8 +68,8 @@
       <PropertyRef Name="MaLH" />
     </Key>
     <Property Name="MaLH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Tieu_de" Type="varchar" MaxLength="200" Nullable="false" />
-    <Property Name="Dia_chi" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Tieu_de" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Dia_chi" Type="nvarchar" MaxLength="250" Nullable="false" />
     <Property Name="Dien_thoai" Type="varchar" MaxLength="250" Nullable="false" />
     <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Facebook" Type="varchar" MaxLength="100" />
@@ -81,7 +81,7 @@
       <PropertyRef Name="MaLSP" />
     </Key>
     <Property Name="MaLSP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Ten_loai" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Ten_loai" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Trang_thai" Type="tinyint" />
   </EntityType>
   <EntityType Name="PHAN_HOI">
@@ -89,12 +89,12 @@
       <PropertyRef Name="MaPH" />
     </Key>
     <Property Name="MaPH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Tieu_de" Type="varchar" MaxLength="200" Nullable="false" />
-    <Property Name="Noi_dung" Type="text" Nullable="false" />
-    <Property Name="Ngay_gui" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="Tieu_de" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Noi_dung" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Ngay_gui" Type="datetime" Nullable="false" StoreGeneratedPattern="Computed" />
     <Property Name="Email" Type="varchar" MaxLength="100" />
     <Property Name="Facebook" Type="varchar" MaxLength="100" />
-    <Property Name="Tra_loi" Type="text" />
+    <Property Name="Tra_loi" Type="nvarchar" MaxLength="200" />
     <Property Name="Trang_thai" Type="tinyint" />
     <Property Name="Da_xem" Type="tinyint" />
   </EntityType>
@@ -103,7 +103,7 @@
       <PropertyRef Name="MaPTTT" />
     </Key>
     <Property Name="MaPTTT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Ten_PTTT" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Ten_PTTT" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Trang_thai" Type="tinyint" />
   </EntityType>
   <EntityType Name="PT_VAN_CHUYEN">
@@ -111,7 +111,7 @@
       <PropertyRef Name="MaPTVC" />
     </Key>
     <Property Name="MaPTVC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Ten_PTVC" Type="varchar" MaxLength="50" />
+    <Property Name="Ten_PTVC" Type="nvarchar" MaxLength="50" />
     <Property Name="Do_dai" Type="int" />
     <Property Name="Don_gia" Type="float" Nullable="false" />
     <Property Name="Trang_thai" Type="tinyint" />
@@ -129,13 +129,13 @@
       <PropertyRef Name="MaSP" />
     </Key>
     <Property Name="MaSP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Ten_sp" Type="varchar" MaxLength="200" Nullable="false" />
-    <Property Name="Mo_ta" Type="varchar" MaxLength="250" />
-    <Property Name="Thong_tin" Type="text" />
+    <Property Name="Ten_sp" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Mo_ta" Type="nvarchar" MaxLength="250" />
+    <Property Name="Thong_tin" Type="nvarchar" MaxLength="250" />
     <Property Name="Gia_goc" Type="float" Nullable="false" />
     <Property Name="Gia_giam_gia" Type="float" />
     <Property Name="Luot_xem" Type="int" Nullable="false" />
-    <Property Name="Ngay_cap_nhat" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="Ngay_cap_nhat" Type="datetime" StoreGeneratedPattern="Computed" />
     <Property Name="Trang_thai" Type="tinyint" />
     <Property Name="MaLSP" Type="int" />
   </EntityType>
@@ -146,16 +146,6 @@
     <Property Name="MaSPCT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="So_luong" Type="int" Nullable="false" />
     <Property Name="MaSP" Type="int" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <Association Name="fk_HOA_DON_CT_HOA_DON">
     <End Role="HOA_DON" Type="Self.HOA_DON" Multiplicity="1" />
@@ -291,7 +281,6 @@
     <EntitySet Name="QUAN_TRI" EntityType="Self.QUAN_TRI" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SAN_PHAM" EntityType="Self.SAN_PHAM" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SAN_PHAM_CT" EntityType="Self.SAN_PHAM_CT" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="fk_HOA_DON_CT_HOA_DON" Association="Self.fk_HOA_DON_CT_HOA_DON">
       <End Role="HOA_DON" EntitySet="HOA_DON" />
       <End Role="CT_HOA_DON" EntitySet="CT_HOA_DON" />

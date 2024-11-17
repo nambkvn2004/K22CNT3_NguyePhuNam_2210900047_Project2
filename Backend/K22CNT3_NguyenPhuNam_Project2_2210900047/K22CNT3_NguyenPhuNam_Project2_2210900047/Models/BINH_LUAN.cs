@@ -19,7 +19,7 @@ namespace K22CNT3_NguyenPhuNam_Project2_2210900047.Models
         public Nullable<int> MaSP { get; set; }
         public string Tieu_de { get; set; }
         public string Noi_dung { get; set; }
-        public byte[] Ngay_BL { get; set; }
+        public Nullable<System.DateTime> Ngay_BL { get; set; }
         public Nullable<byte> Trang_thai { get; set; }
     
         public virtual KHACH_HANG KHACH_HANG { get; set; }

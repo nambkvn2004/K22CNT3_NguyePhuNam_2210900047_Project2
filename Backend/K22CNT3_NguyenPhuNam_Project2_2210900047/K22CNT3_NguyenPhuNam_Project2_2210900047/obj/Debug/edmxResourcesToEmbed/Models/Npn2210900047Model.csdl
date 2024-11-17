@@ -7,9 +7,9 @@
     <Property Name="MaBL" Type="Int32" Nullable="false" />
     <Property Name="MaKH" Type="Int32" />
     <Property Name="MaSP" Type="Int32" />
-    <Property Name="Tieu_de" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="Noi_dung" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="Ngay_BL" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Tieu_de" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Noi_dung" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Ngay_BL" Type="DateTime" annotation:StoreGeneratedPattern="Computed" Precision="3" />
     <Property Name="Trang_thai" Type="Byte" />
     <NavigationProperty Name="KHACH_HANG" Relationship="Self.fk_KHACH_HANG_BINH_LUAN" FromRole="BINH_LUAN" ToRole="KHACH_HANG" />
     <NavigationProperty Name="SAN_PHAM" Relationship="Self.fk_SAN_PHAM_BINH_LUAN" FromRole="BINH_LUAN" ToRole="SAN_PHAM" />
@@ -42,9 +42,9 @@
       <PropertyRef Name="MaHD" />
     </Key>
     <Property Name="MaHD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Ngay_HD" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
-    <Property Name="Hoten_nguoinhan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="Diachi_nguoinhan" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Ngay_HD" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Computed" Precision="3" />
+    <Property Name="Hoten_nguoinhan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Diachi_nguoinhan" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="Dienthoai_nguoinhan" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="Diachi_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Ngay_giao_hang" Type="DateTime" Precision="3" />
@@ -79,8 +79,8 @@
       <PropertyRef Name="MaLH" />
     </Key>
     <Property Name="MaLH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Tieu_de" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Dia_chi" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tieu_de" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Dia_chi" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Dien_thoai" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Facebook" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -92,7 +92,7 @@
       <PropertyRef Name="MaLSP" />
     </Key>
     <Property Name="MaLSP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Ten_loai" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ten_loai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Trang_thai" Type="Byte" />
     <NavigationProperty Name="SAN_PHAM" Relationship="Self.fk_LOAI_SAN_PHAM" FromRole="LOAI_SAN_PHAM" ToRole="SAN_PHAM" />
   </EntityType>
@@ -101,12 +101,12 @@
       <PropertyRef Name="MaPH" />
     </Key>
     <Property Name="MaPH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Tieu_de" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Noi_dung" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Ngay_gui" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Tieu_de" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Noi_dung" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ngay_gui" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Computed" Precision="3" />
     <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="Facebook" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="Tra_loi" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Tra_loi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="Trang_thai" Type="Byte" />
     <Property Name="Da_xem" Type="Byte" />
   </EntityType>
@@ -115,7 +115,7 @@
       <PropertyRef Name="MaPTTT" />
     </Key>
     <Property Name="MaPTTT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Ten_PTTT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ten_PTTT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Trang_thai" Type="Byte" />
     <NavigationProperty Name="HOA_DON" Relationship="Self.fk_PT_THANH_TOAN_HOA_DON" FromRole="PT_THANH_TOAN" ToRole="HOA_DON" />
   </EntityType>
@@ -124,7 +124,7 @@
       <PropertyRef Name="MaPTVC" />
     </Key>
     <Property Name="MaPTVC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Ten_PTVC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ten_PTVC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Do_dai" Type="Int32" />
     <Property Name="Don_gia" Type="Double" Nullable="false" />
     <Property Name="Trang_thai" Type="Byte" />
@@ -143,13 +143,13 @@
       <PropertyRef Name="MaSP" />
     </Key>
     <Property Name="MaSP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Ten_sp" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Mo_ta" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-    <Property Name="Thong_tin" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Ten_sp" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Mo_ta" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Thong_tin" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="Gia_goc" Type="Double" Nullable="false" />
     <Property Name="Gia_giam_gia" Type="Double" />
     <Property Name="Luot_xem" Type="Int32" Nullable="false" />
-    <Property Name="Ngay_cap_nhat" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Ngay_cap_nhat" Type="DateTime" annotation:StoreGeneratedPattern="Computed" Precision="3" />
     <Property Name="Trang_thai" Type="Byte" />
     <Property Name="MaLSP" Type="Int32" />
     <NavigationProperty Name="BINH_LUAN" Relationship="Self.fk_SAN_PHAM_BINH_LUAN" FromRole="SAN_PHAM" ToRole="BINH_LUAN" />
@@ -166,16 +166,6 @@
     <Property Name="MaSP" Type="Int32" />
     <NavigationProperty Name="CT_HOA_DON" Relationship="Self.fk_SAN_PHAM_CT_CT_HOA_DON" FromRole="SAN_PHAM_CT" ToRole="CT_HOA_DON" />
     <NavigationProperty Name="SAN_PHAM" Relationship="Self.fk_SAN_PHAM_SAN_PHAM_CT" FromRole="SAN_PHAM_CT" ToRole="SAN_PHAM" />
-  </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <Association Name="fk_KHACH_HANG_BINH_LUAN">
     <End Role="KHACH_HANG" Type="Self.KHACH_HANG" Multiplicity="0..1" />
@@ -311,7 +301,6 @@
     <EntitySet Name="QUAN_TRI" EntityType="Self.QUAN_TRI" />
     <EntitySet Name="SAN_PHAM" EntityType="Self.SAN_PHAM" />
     <EntitySet Name="SAN_PHAM_CT" EntityType="Self.SAN_PHAM_CT" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <AssociationSet Name="fk_KHACH_HANG_BINH_LUAN" Association="Self.fk_KHACH_HANG_BINH_LUAN">
       <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
       <End Role="BINH_LUAN" EntitySet="BINH_LUAN" />

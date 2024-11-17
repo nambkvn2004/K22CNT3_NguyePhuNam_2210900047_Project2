@@ -38,6 +38,5 @@ namespace K22CNT3_NguyenPhuNam_Project2_2210900047.Models
         public virtual DbSet<QUAN_TRI> QUAN_TRI { get; set; }
         public virtual DbSet<SAN_PHAM> SAN_PHAM { get; set; }
         public virtual DbSet<SAN_PHAM_CT> SAN_PHAM_CT { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

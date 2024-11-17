@@ -18,7 +18,6 @@
         <EntityTypeShape EntityType="K22CNT3_NguyenPhuNam_2210900047_Project2_DbModel.QUAN_TRI" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
         <EntityTypeShape EntityType="K22CNT3_NguyenPhuNam_2210900047_Project2_DbModel.SAN_PHAM" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
         <EntityTypeShape EntityType="K22CNT3_NguyenPhuNam_2210900047_Project2_DbModel.SAN_PHAM_CT" Width="1.5" PointX="5.25" PointY="11.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="K22CNT3_NguyenPhuNam_2210900047_Project2_DbModel.sysdiagram" Width="1.5" PointX="9.75" PointY="2.625" IsExpanded="true" />
         <AssociationConnector Association="K22CNT3_NguyenPhuNam_2210900047_Project2_DbModel.fk_KHACH_HANG_BINH_LUAN" ManuallyRouted="false" />
         <AssociationConnector Association="K22CNT3_NguyenPhuNam_2210900047_Project2_DbModel.fk_SAN_PHAM_BINH_LUAN" ManuallyRouted="false" />
         <AssociationConnector Association="K22CNT3_NguyenPhuNam_2210900047_Project2_DbModel.fk_HOA_DON_CT_HOA_DON" ManuallyRouted="false" />

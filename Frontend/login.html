@@ -9,7 +9,7 @@
 <body>
     <div class="modal-content login-page">
         <h2>Đăng Nhập</h2>
-        <form>
+        <form id="login-form">
             <label for="login-username">Tên Đăng Nhập:</label>
             <input type="text" id="login-username" name="username" required>
 
@@ -20,5 +20,20 @@
         </form>
         <a href="index.html" class="back-link">Quay lại Trang Chủ</a>
     </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Ngăn chặn form gửi mặc định
+
+            const username = document.getElementById('login-username').value;
+            const password = document.getElementById('login-password').value;
+
+            if (username === 'admin' && password === 'nam123') {
+                window.location.href = 'https://localhost:44395/';
+            } else {
+                alert('Tên đăng nhập hoặc mật khẩu không đúng!');
+            }
+        });
+    </script>
 </body>
 </html>

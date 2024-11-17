@@ -21,7 +21,7 @@ namespace K22CNT3_NguyenPhuNam_Project2_2210900047.Models
         }
     
         public int MaHD { get; set; }
-        public byte[] Ngay_HD { get; set; }
+        public System.DateTime Ngay_HD { get; set; }
         public string Hoten_nguoinhan { get; set; }
         public string Diachi_nguoinhan { get; set; }
         public string Dienthoai_nguoinhan { get; set; }

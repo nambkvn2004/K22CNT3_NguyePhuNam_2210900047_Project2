@@ -17,7 +17,7 @@ namespace K22CNT3_NguyenPhuNam_Project2_2210900047.Models
         public int MaPH { get; set; }
         public string Tieu_de { get; set; }
         public string Noi_dung { get; set; }
-        public byte[] Ngay_gui { get; set; }
+        public System.DateTime Ngay_gui { get; set; }
         public string Email { get; set; }
         public string Facebook { get; set; }
         public string Tra_loi { get; set; }
